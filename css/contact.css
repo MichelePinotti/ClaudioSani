@@ -1,0 +1,87 @@
+/* This file contains custom styles for the personal website */
+
+body {
+    font-family: 'Merriweather', 'Georgia', serif;
+    line-height: 1.8;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+h1 {
+    margin: 0 0 30px 0;
+    font-size: 2.8em;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    color: #35424a;
+    margin-top: 40px;
+    margin-bottom: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.lead {
+    font-size: 1.3em;
+    color: #444;
+    font-style: italic;
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+ul, ol {
+    font-size: 1.1em;
+    font-family: 'Merriweather', 'Georgia', serif;
+    margin-bottom: 25px;
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-family: 'Merriweather', serif;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    background: #e8491d;
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Merriweather', serif;
+    font-size: 1em;
+}
+
