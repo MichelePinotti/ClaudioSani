@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spartiti Disponibili e Commissioni</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/spartiti.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="concerts.html">Concerti</a></li>
+          <li class="nav-item"><a class="nav-link " href="spartiti.html">Spartiti</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Spartiti Disponibili</h1>
+    <p class="lead">Consulta e acquista spartiti già realizzati, suddivisi per autore. Usa il filtro per trovare rapidamente lo spartito che ti interessa e clicca sul bottone acquista per ottenere le informazioni necessarie all'acquisto.</p>
+
+    <!-- Filtro per autore -->
+    <div class="mb-4">
+      <label for="autore-filter" class="form-label"><strong>Filtra per autore:</strong></label>
+      <select id="autore-filter" class="form-select" onchange="filterSpartiti()">
+        <option value="tutti">Tutti</option>
+        <option value="Mozart">Mozart</option>
+        <option value="Beethoven">Beethoven</option>
+        <option value="Verdi">Verdi</option>
+        <option value="Bach">Bach</option>
+      </select>
+    </div>
+
+    <!-- Lista spartiti -->
+    <div id="spartiti-list">
+      <div class="spartito" data-autore="Mozart">
+        <h3>Mozart</h3>
+        <ul>
+          <li>
+            <strong>Requiem in D minor</strong> - Coro e Orchestra
+            <button type="button" class="btn btn-outline-primary btn-sm ms-2"
+              data-bs-toggle="modal" data-bs-target="#acquistaModal"
+              data-titolo="Requiem in D minor" data-autore="Mozart">Acquista</button>
+          </li>
+          <li>
+            <strong>Eine kleine Nachtmusik</strong> - Quartetto d'archi
+            <button type="button" class="btn btn-outline-primary btn-sm ms-2"
+              data-bs-toggle="modal" data-bs-target="#acquistaModal"
+              data-titolo="Eine kleine Nachtmusik" data-autore="Mozart">Acquista</button>
+          </li>
+        </ul>
+      </div>
+      <div class="spartito" data-autore="Beethoven">
+        <h3>Beethoven</h3>
+        <ul>
+          <li>
+            <strong>Sinfonia n.9</strong> - Orchestra
+            <button type="button" class="btn btn-outline-primary btn-sm ms-2"
+              data-bs-toggle="modal" data-bs-target="#acquistaModal"
+              data-titolo="Sinfonia n.9" data-autore="Beethoven">Acquista</button>
+          </li>
+          <li>
+            <strong>Sonata al chiaro di luna</strong> - Pianoforte
+            <button type="button" class="btn btn-outline-primary btn-sm ms-2"
+              data-bs-toggle="modal" data-bs-target="#acquistaModal"
+              data-titolo="Sonata al chiaro di luna" data-autore="Beethoven">Acquista</button>
+          </li>
+        </ul>
+      </div>
+      <div class="spartito" data-autore="Verdi">
+        <h3>Verdi</h3>
+        <ul>
+          <li>
+            <strong>Va, pensiero</strong> - Coro
+            <button type="button" class="btn btn-outline-primary btn-sm ms-2"
+              data-bs-toggle="modal" data-bs-target="#acquistaModal"
+              data-titolo="Va, pensiero" data-autore="Verdi">Acquista</button>
+          </li>
+        </ul>
+      </div>
+      <div class="spartito" data-autore="Bach">
+        <h3>Bach</h3>
+        <ul>
+          <li>
+            <strong>Toccata e fuga in re minore</strong> - Organo
+            <button type="button" class="btn btn-outline-primary btn-sm ms-2"
+              data-bs-toggle="modal" data-bs-target="#acquistaModal"
+              data-titolo="Toccata e fuga in re minore" data-autore="Bach">Acquista</button>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Modal Acquista -->
+     <div class="modal fade" id="acquistaModal" tabindex="-1" aria-labelledby="acquistaModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        <h5 class="modal-title" id="acquistaModalLabel">Acquisto Spartito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalSpartitoInfo"></p>
+              <p>Per richiedere informazioni su questo spartito oppure per acquistarlo puoi:</p>
+              <ul>
+                <li>Scrivere una email a <a href="mailto:claudio.sani@email.com?subject=Richiesta%20spartito%20personalizzato">claudio.sani@email.com</a></li>
+                <li>Telefonare al <a href="tel:+391234567890">+39 123 456 7890</a></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Sezione commissioni -->
+    <hr class="my-5">
+    <h2>Commissiona uno Spartito Personalizzato</h2>
+    <p>
+      Se desideri uno spartito su misura per le tue esigenze (arrangiamenti, trascrizioni, composizioni originali), puoi commissionarmelo direttamente.<br>
+      <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal" data-bs-target="#contattiModal">
+        Richiedi uno spartito personalizzato
+      </button>
+
+      <!-- Modal -->
+       <div class="modal fade" id="contattiModal" tabindex="-1" aria-labelledby="contattiModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="contattiModalLabel">Contatti per acquistare o richiedere informazioni sullo spartito</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+            </div>
+            <div class="modal-body">
+              <p>Per commissionare uno spartito personalizzato e ricevere un preventivo, puoi:</p>
+              <ul>
+                <li>Scrivere una email a <a href="mailto:claudio.sani@email.com?subject=Richiesta%20spartito%20personalizzato">claudio.sani@email.com</a></li>
+                <li>Telefonare al <a href="tel:+391234567890">+39 123 456 7890</a></li>
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </p>
+  </div>
+
+  
+  <footer class="text-center py-4">
+    <p>&copy; 2023 Mio Nome. Tutti i diritti riservati.</p>
+    <p>Per commissionare spartiti, contattami all'email: <a href="mailto:saniclaudio@example.com">saniclaudio@example.com</a></p>
+    <p>Per richieste di concerti dedicati alla corale Giuseppe Verdi, contattami alla mail: <a href="mailto:coraleostiglia@example.com">coraleostiglia@example.com</a></p>
+  </footer>
+
+  <script>
+    function filterSpartiti() {
+      const filter = document.getElementById('autore-filter').value;
+      const spartiti = document.querySelectorAll('.spartito');
+      spartiti.forEach(s => {
+        if (filter === 'tutti' || s.getAttribute('data-autore') === filter) {
+          s.style.display = 'block';
+        } else {
+          s.style.display = 'none';
+        }
+      });
+    }
+
+    // Popola il modal con info spartito selezionato
+    document.addEventListener('DOMContentLoaded', function() {
+      var acquistaModal = document.getElementById('acquistaModal');
+      acquistaModal.addEventListener('show.bs.modal', function (event) {
+        var button = event.relatedTarget;
+        var titolo = button.getAttribute('data-titolo');
+        var autore = button.getAttribute('data-autore');
+        var info = `<strong>Spartito:</strong> ${titolo}<br><strong>Autore:</strong> ${autore}`;
+        document.getElementById('modalSpartitoInfo').innerHTML = info;
+      });
+    });
+  </script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+</body>
+</html>
