@@ -20,13 +20,10 @@
             <a class="nav-link" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="biography.html">Biografia</a>
-          </li>
-          <li class="nav-item">
             <a class="nav-link" href="concerts.html">Concerti</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contatti</a>
+            <a class="nav-link" href="spartiti.html">Spartiti</a>
           </li>
         </ul>
       </div>
@@ -34,41 +31,72 @@
   </nav>
   <div class="container mt-5">
     <h1 class="text-center">Concerti</h1>
+
+    <div class="container my-5">
+      <div class="alert alert-info text-center">
+        <h4 class="mb-3">Vuoi invitare la corale Giuseppe Verdi ad esibirsi?</h4>
+        <p>Per informazioni e richieste, contattami via email a <a href="mailto:coraleostiglia@example.com">coraleostiglia@example.com</a> oppure al cellulare <a href="tel:+391234567890">+39 123 456 7890</a>.</p>
+      </div>
+    </div>
     
     <section class="upcoming-concerts mt-4">
       <h2>Concerti Futuri</h2>
       <ul class="list-group">
         <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-          <span>Data: 15 Marzo 2024 - Luogo: Teatro Nazionale</span>
-          <a href="https://www.ticketone.it/prevendita1" class="btn btn-primary btn-sm mt-2 mt-md-0" target="_blank">Contattami personalmente</a>
+          <span>Data: 15 Marzo 2024 - Orario: 20:30 - Luogo: Teatro Nazionale</span>
+          <button class="btn btn-primary btn-sm mt-2 mt-md-0" data-bs-toggle="modal" data-bs-target="#contactModal">Contattami</button>
         </li>
         <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-          <span>Data: 22 Aprile 2024 - Luogo: Auditorium Comunale</span>
-          <a href="https://www.ticketone.it/prevendita2" class="btn btn-primary btn-sm mt-2 mt-md-0" target="_blank">Prevendita</a>
+          <span>Data: 22 Aprile 2024 - Orario: 21:00 - Luogo: Auditorium Comunale</span>
+          <button class="btn btn-primary btn-sm mt-2 mt-md-0">Libero accesso</button>
         </li>
         <li class="list-group-item d-flex flex-column flex-md-row justify-content-between align-items-md-center">
-          <span>Data: 10 Giugno 2024 - Luogo: Festival Musicale Estivo</span>
+          <span>Data: 10 Giugno 2024 - Orario: 19:30 - Luogo: Festival Musicale Estivo</span>
           <a href="https://www.ticketone.it/prevendita3" class="btn btn-primary btn-sm mt-2 mt-md-0" target="_blank">Prevendita</a>
         </li>
       </ul>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="contactModalLabel">Contatti per informazioni e prenotazioni</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Chiudi"></button>
+          </div>
+          <div class="modal-body">
+            <p>Per informazioni aggiuntive sull'evento e per riservare posti, puoi:</p>
+            <ul>
+              <li>Scrivere una email a <a href="mailto:coraleostiglia@example.com">coraleostiglia@example.com</a></li>
+              <li>Telefonare al <a href="tel:+391234567890">+39 123 456 7890</a></li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <section class="past-concerts mt-4">
       <h2>Concerti Passati</h2>
       <ul class="list-group">
         <li class="list-group-item">
           <strong>Data: 5 Gennaio 2024</strong> - Luogo: Sala Concerti
-          <div class="ratio ratio-16x9 mt-2">
-            <iframe src="https://www.youtube.com/embed/Psjx-Sh1MsZsGGWm" title="Concerto 5 gennaio 2024" frameborder="0" allowfullscreen></iframe>
-          </div>
+          <p>Un concerto indimenticabile con un repertorio classico e moderno.</p>
           <a href="https://www.youtube.com" class="btn btn-primary btn-sm mt-2 mt-md-0" target="_blank">Clicca per riprodurre il video del concerto</a>
         </li>
       </ul>
     </section>
   </div>
 
+  
+
   <footer class="text-center py-4">
     <p>&copy; 2023 Mio Nome. Tutti i diritti riservati.</p>
+    <p>Per commissionare spartiti, contattami all'email: <a href="mailto:saniclaudio@example.com">saniclaudio@example.com</a></p>
+    <p>Per richieste di concerti dedicati alla corale Giuseppe Verdi, contattami alla mail: <a href="mailto:coraleostiglia@example.com">coraleostiglia@example.com</a></p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
